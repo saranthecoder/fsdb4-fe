@@ -1,74 +1,109 @@
+/* App container */
 .app {
   font-family: 'Segoe UI', sans-serif;
-  padding: 30px;
-  background-color: #f5f5f5;
+  padding: 40px 20px;
+  background: linear-gradient(to right, #fdfbfb, #ebedee);
   min-height: 100vh;
 }
 
+/* Title */
 h1 {
-  color: #333;
+  color: #00ffe1;
   text-align: center;
-  margin-bottom: 30px;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: 700;
 }
 
+/* Form */
 .user-form {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 15px;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .user-form input {
-  padding: 10px;
+  padding: 12px 16px;
   font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.user-form input:focus {
+  border-color: #2a9d8f;
+  box-shadow: 0 0 5px rgba(42, 157, 143, 0.3);
 }
 
 .user-form button {
-  padding: 10px 20px;
+  padding: 12px 24px;
   background-color: #2a9d8f;
   color: white;
   border: none;
-  border-radius: 6px;
-  cursor: pointer;
+  border-radius: 8px;
   font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
+.user-form button:hover {
+  background-color: #21867a;
+  transform: translateY(-2px);
+}
+
+/* User list */
 .user-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
 }
 
+/* Card */
 .user-card {
-  background-color: white;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 25px 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 .user-card h3 {
-  margin-top: 0;
-  color: #2a9d8f;
+  margin: 0;
+  color: #264653;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
 }
 
 .user-card p {
-  margin: 5px 0;
+  margin: 6px 0;
+  color: #555;
 }
 
+/* Buttons inside card */
 .actions {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .actions button {
   margin-right: 10px;
-  padding: 5px 12px;
+  padding: 8px 16px;
   border: none;
-  border-radius: 5px;
-  font-weight: bold;
+  border-radius: 6px;
+  font-weight: 600;
   cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.actions button:hover {
+  transform: translateY(-1px);
 }
 
 .actions .edit {
@@ -76,7 +111,15 @@ h1 {
   color: white;
 }
 
+.actions .edit:hover {
+  background-color: #005f8a;
+}
+
 .actions .delete {
   background-color: #e63946;
   color: white;
+}
+
+.actions .delete:hover {
+  background-color: #b82a37;
 }
